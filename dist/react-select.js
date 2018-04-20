@@ -1128,13 +1128,13 @@ var Select$1 = function (_React$Component) {
 					break;
 				case 13:
 					// enter
+					if (!this.state.isOpen) {
+						break;
+					}
+
 					event.preventDefault();
 					event.stopPropagation();
-					if (this.state.isOpen) {
-						this.selectFocusedOption();
-					} else {
-						this.focusNextOption();
-					}
+					this.selectFocusedOption();
 					break;
 				case 27:
 					// escape
